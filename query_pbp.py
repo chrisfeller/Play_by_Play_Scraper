@@ -52,4 +52,4 @@ def query_table(table):
 
 if __name__=='__main__':
     # Query 2019 play-by-play data
-    pbp_2019 = query_table('pbp_2019')
+    pbp_2020 = query_table('pbp_2020')

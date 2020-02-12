@@ -90,8 +90,6 @@ def update_pbp_postgres():
     connect()
     # Create table for input season
     create_table('pbp_2020', df)
-    # Remove temporary staging table
-    remove_staging_table()
 
 def remove_staging_table():
     """
@@ -112,7 +110,7 @@ def remove_staging_table():
 # Define dags
 dag = DAG('scrape_previous_day', description='Scrape pbp from previous day',
           schedule_interval='@once',
-          start_date=datetime(2020, 1, 27), catchup=False)
+          start_date=datetime(2020, 2, 11), catchup=False)
 
 dummy_operator = DummyOperator(task_id='dummy_task', retries=3, dag=dag)
 

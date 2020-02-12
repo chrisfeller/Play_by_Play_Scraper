@@ -104,6 +104,6 @@ def remove_staging_table(season):
 
 if __name__=='__main__':
     # Scrape 2018-2019 season
-    scrape_complete_season(2019)
+    # scrape_complete_season(2019)
     # Insert 2018-2019 data into play_by_play table in postgres
-    update_pbp_postgres(2019)
+    # update_pbp_postgres(2019)
